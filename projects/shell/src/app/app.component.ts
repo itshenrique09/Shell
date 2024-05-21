@@ -13,10 +13,19 @@ import { CommonModule } from '@angular/common'
 })
 export class AppComponent {
   title = 'BSimple Academy';
+  isHovered: boolean = false;
 
   isNightMode: boolean | undefined;
   constructor(private router: Router) {}
   ngOnInit() {}
+
+  navigateToHomePage() {
+    this.router.navigate(['/']);
+  }
+
+  hoverTitle(isHovered: boolean) {
+    this.isHovered = isHovered;
+  }
 
   navigateToProjetos() {
     this.router.navigate(['/projeto']);

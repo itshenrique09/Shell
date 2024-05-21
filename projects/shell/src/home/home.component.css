@@ -1,35 +1,58 @@
-/* Styles for the main content */
+/* Reset default margin and padding */
+body, h1, p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Styles for the welcome container */
 .welcome-container {
+  background-color: #ffffff;
   text-align: center;
-  margin-top: 20vh;
+  padding: 15vh 0; /* Adjusted padding to push content more towards the center */
 }
 
 .welcome-container h1 {
-  font-size: 48px;
-  font-weight: bold;
-  margin-bottom: 30px;
+  font-size: 4em; /* Increased font size for the title */
+  color: #333;
+  margin-bottom: 50px; /* Increased margin between title and image */
 }
 
 .welcome-container img {
-  max-width: 100%;
-  display: block;
-  margin: 0 auto;
+  max-width: 70%; /* Adjusted image width */
+  height: auto;
+  margin: 50px 0; /* Increased margin around image */
 }
 
 .app-description {
-  font-size: 18px;
-  color: #555;
-  margin-top: 20px;
+  font-size: 1.6em; /* Increased font size for the description */
+  color: #444; /* Changed text color */
+  background-color: #fff; /* Added a white background */
+  padding: 30px; /* Increased padding */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Added a subtle shadow */
+  margin-top: 50px; /* Increased margin between image and description */
 }
 
 /* Styles for the footer */
 .footer {
-  text-align: center;
-  margin-top: 50px;
+  background-color: #333;
+  color: #fff;
+  padding: 30px 0; /* Increased padding */
+  position: fixed; /* Fixed position to keep it at the bottom */
+  width: 100%;
+  bottom: 0;
+  text-align: center; /* Centering the content */
 }
 
 .created-by {
-  font-size: 14px;
-  color: #777;
-  margin-top: 20px;
+  font-size: 1em; /* Increased font size */
+}
+
+.created-by:before {
+  content: "Created By: ";
+}
+
+/* Hover effect for the footer */
+.footer:hover {
+  background-color: #555;
 }

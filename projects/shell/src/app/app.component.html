@@ -12,7 +12,10 @@
   <div class="content">
     <div class="topbar">
       <button class="open-sidebar-btn" (click)="toggleSidebar()">☰</button>
-      <h1 class="title">B<span class="artistic-letter">S</span>imple Academy</h1>
+      <h1 class="title" (click)="navigateToHomePage()" (mouseover)="hoverTitle(true)" (mouseleave)="hoverTitle(false)">
+        <span *ngIf="!isHovered">B<span class="artistic-letter">S</span>imple Academy</span>
+        <span *ngIf="isHovered">GO BACK</span>
+      </h1>
     </div>
     <router-outlet></router-outlet>
   </div>
