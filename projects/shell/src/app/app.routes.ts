@@ -9,28 +9,36 @@ export const routes: Routes = [
     pathMatch: 'full',
   },
   {
+    path: 'projeto',
+    // loadChildreas instead of loadComponent !!!
+    loadChildren: () =>
+      loadRemoteModule('projeto', './projectModule').then(
+        (m) => m.ProjetoMainModule
+      ),
+  },
+  {
     path: 'Holiday',
     // loadChildreas instead of loadComponent !!!
     loadChildren: () =>
-      loadRemoteModule('Holiday', './holidayModule').then((m) => m.HolidayMainModule),
+      loadRemoteModule('Holiday', './holidayModule').then(
+        (m) => m.HolidayMainModule
+      ),
   },
 
   {
     path: 'colaborator',
     // loadChildreas instead of loadComponent !!!
     loadChildren: () =>
-      loadRemoteModule('colaborator', './colaboratorModule').then((m) => m.ColaboratorMainModule),
+      loadRemoteModule('colaborator', './colaboratorModule').then(
+        (m) => m.ColaboratorMainModule
+      ),
   },
   {
     path: 'association',
     // loadChildreas instead of loadComponent !!!
     loadChildren: () =>
-      loadRemoteModule('association', './associationModule').then((m) => m.AssociationMainModule),
-  },
-  {
-    path: 'projeto',
-    // loadChildreas instead of loadComponent !!!
-    loadChildren: () =>
-      loadRemoteModule('projeto', './Component').then((m) => m.ProjetoMainModule),
+      loadRemoteModule('association', './associationModule').then(
+        (m) => m.AssociationMainModule
+      ),
   },
 ];
